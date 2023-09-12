@@ -30,8 +30,8 @@ public class UserData {
         roleRepository.save(role1);
         roleRepository.save(role2);
 
-        User user = new User("user",new BCryptPasswordEncoder().encode("user"));
-        User admin = new User("admin",new BCryptPasswordEncoder().encode("admin"));
+        User user = new User("Кого","Чего",27,"user@mail.ru",new BCryptPasswordEncoder().encode("user"));
+        User admin = new User("Кто то там","Чё то там",27,"admin@mail.ru",new BCryptPasswordEncoder().encode("admin"));
         user.setRoles(new HashSet<>(Set.of(role2)));
         admin.setRoles(new HashSet<>(Set.of(role1)));
 
